@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Habit Tracker</h1>
+        <p class="subtitle">Track your daily habits and progress</p>
+
+        <div class="input-group">
+            <input type="text" id="habitInput" placeholder="Enter a habit">
+            <button id="addHabitBtn">Add Habit</button>
+        </div>
+
+        <div class="month-controls">
+            <select id="monthSelect">
+                <option value="January" selected>January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+            </select>
+            <span id="selectedMonthDisplay">Current Month: January</span>
+        </div>
+
+        <table id="habitTable">
+            <thead>
+                <tr>
+                    <th>Habit</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                    <th>Sun</th>
+                </tr>
+            </thead>
+            <tbody id="habitList">
+                <!-- Habits will be added here -->
+            </tbody>
+        </table>
+
+        <div id="progressContainer" class="progress-container">
+            Week 1 Progress: 0%
+        </div>
+
+        <div class="chart-section">
+            <h2>Monthly Overview</h2>
+            <div class="chart-container">
+                <canvas id="monthlyChart"></canvas>
+            </div>
+            <div id="monthlyPercentage" class="monthly-percentage">
+                Monthly Completion: 0%
+            </div>
+        </div>
+
+        <!-- Top Habits -->
+        <div class="chart-section">
+            <h2>Top Habits (This Month)</h2>
+            <div class="top-habits-list" id="topHabitsList">
+                <!-- Sample structure (will be populated dynamically) -->
+                <div class="habit-rank-item">
+                    <span class="rank">1</span>
+                    <span class="habit-name">Sample Habit</span>
+                    <span class="habit-percentage">0%</span>
+                </div>
+                <div class="habit-rank-item">
+                    <span class="rank">2</span>
+                    <span class="habit-name">Another Habit</span>
+                    <span class="habit-percentage">0%</span>
+                </div>
+                <div class="habit-rank-item">
+                    <span class="rank">3</span>
+                    <span class="habit-name">Third Habit</span>
+                    <span class="habit-percentage">0%</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Weekly Progression -->
+        <div class="chart-section">
+            <h2>Weekly Progression</h2>
+            <div class="chart-container" style="width: 100%; height: 250px;">
+                <canvas id="weeklyChart"></canvas>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

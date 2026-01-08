@@ -1,0 +1,251 @@
+/* Habit Tracker Styles */
+* {
+    box-sizing: border_box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    overflow-x: auto;
+    /* Allow horizontal scroll for wide tables */
+}
+
+/* Highlight for today's column */
+.today-highlight {
+    background-color: #fff3cd !important;
+    /* Light yellow */
+    border-left: 1px solid #ffeeba;
+    border-right: 1px solid #ffeeba;
+    position: relative;
+    /* Ensure it stands out */
+}
+
+/* Future Day Styling */
+.future-day input {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.future-day {
+    background-color: #f9f9f9;
+    /* Slight grey background */
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 2rem;
+}
+
+#habitInput {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+#addHabitBtn {
+    padding: 10px 20px;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#addHabitBtn:hover {
+    background-color: #27ae60;
+}
+
+.month-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    border: 1px solid #e9ecef;
+}
+
+#monthSelect {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #333;
+    outline: none;
+    cursor: pointer;
+}
+
+#selectedMonthDisplay {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1.1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background-color: #f8f9fa;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+/* Top Habits List */
+.top-habits-list {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.habit-rank-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    border-left: 3px solid #2ecc71;
+    transition: background-color 0.2s;
+}
+
+.habit-rank-item:hover {
+    background-color: #e9ecef;
+}
+
+.habit-rank-item .rank {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2c3e50;
+    width: 30px;
+    text-align: center;
+}
+
+.habit-rank-item .habit-name {
+    flex: 1;
+    font-size: 1rem;
+    color: #444;
+    padding-left: 15px;
+}
+
+.habit-rank-item .habit-percentage {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2ecc71;
+}
+
+td:first-child {
+    text-align: left;
+    font-weight: 500;
+    color: #444;
+}
+
+/* Habit Name and Streak Styling */
+.habit-name-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.habit-name-text {
+    font-weight: 500;
+    color: #444;
+}
+
+.streak-info {
+    display: flex;
+    gap: 12px;
+    font-size: 0.75rem;
+    color: #888;
+}
+
+.streak-current,
+.streak-best {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+}
+
+input[type="checkbox"] {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    accent-color: #2ecc71;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-bottom: 2rem;
+}
+
+.progress-container {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2c3e50;
+    text-align: right;
+}
+
+.chart-section {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid #eee;
+    text-align: center;
+}
+
+.chart-section h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.chart-container {
+    position: relative;
+    height: 300px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.monthly-percentage {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    color: #555;
+    font-weight: 600;
+}

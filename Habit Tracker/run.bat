@@ -1,0 +1,9 @@
+@echo off
+echo Starting Habit Tracker...
+echo.
+echo Installing requirements if needed...
+pip install flask
+echo.
+echo Launching Server...
+python backend/app.py
+pause
