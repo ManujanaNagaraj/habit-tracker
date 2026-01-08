@@ -43,7 +43,7 @@ habit-tracker/
 └── run.bat
 ## ▶️ How to Run Locally
 
-### 1. Clone the repository
+1. Clone the repository
 ```bash
 git clone https://github.com/ManujanaNagaraj/habit-tracker.git
 cd habit-tracker
@@ -55,3 +55,42 @@ python backend/app.py
 
 4. Open in browser
 http://127.0.0.1:5000/
+
+🎯 What I Learned
+
+Designing calendar-aware data models
+
+Handling week & month based analytics
+
+Implementing habit streak algorithms
+
+Building interactive dashboards using Chart.js
+
+Managing real-world Git workflows
+
+📌 Future Enhancements
+
+Year selector
+
+User authentication
+
+Export reports (PDF / CSV)
+
+Mobile-first UI improvements
+
+👩‍💻 Author
+
+Manujana Nagaraj
+Computer Science (AI & ML) Student
+GitHub: https://github.com/ManujanaNagaraj
+
+---
+
+## ✅ STEP 3 — Commit README Changes
+
+In terminal:
+
+```bash
+git add README.md
+git commit -m "Update README with project description and usage"
+git push
